@@ -18,7 +18,8 @@ function fn() {
   {
     // This will work in a case we need to run on dev
   }
-  karate.configure('connectTimeout',5000)
-  karate.configure('readTimeout',5000)
+  // Just increased the timeout for the api, as some of them go beyond 5000 ms the standard time
+  karate.configure('connectTimeout',50000)
+  karate.configure('readTimeout',50000)
   return config;
 }
